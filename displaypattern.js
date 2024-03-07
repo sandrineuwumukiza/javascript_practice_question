@@ -89,6 +89,22 @@ console.log(emptyString);
 // 1 0 0 0 1
 // 1 1 1 1 1
 
+function displayPattern(rows, cols) {
+    for (let i = 0; i < rows; i++) {
+        let row = '';
+        for (let j = 0; j < cols; j++) {
+            if (i === 0 || i === rows - 1 || j === 0 || j === cols - 1) {
+                row += '1 ';
+            } else {
+                row += '0 ';
+            }
+        }
+        console.log(row);
+    }
+}
+
+// Call the function with the desired number of rows and columns
+displayPattern(5, 5);
 
 // let emptyString = '';
 
@@ -107,19 +123,53 @@ console.log(emptyString);
 
 // displayPatternOfBinaryNumber(4);
 // console.log(emptyString);
+
+
 // 14.    Create a function that displays a pattern like this:
 //       1 
 //     1
 //   1 
 // 1
 
+
+// function displayPattern() {
+// let str = ''
+
+//     for (let i = 0; i < pattern.length; i++) {
+//         console.log(pattern[i]);
+//     }
+// }
+
+// // Call the function to display the pattern
+// displayPattern();
+
+
 // 15.    Given an array like this:
+
+
 // var array = [1,3,4,3,7,8,0,12,19];    
-// Create a function to reverse the order of the elements inside the given array.
+// // Create a function to reverse the order of the elements inside the given array.
+// function reverseArray(array) {
+//     array = array.reverse();
+// }
+
+// reverseArray(array);
+// console.log(array);
 
 // 16.    Given an array like this: 
-// var some numbers = [3,4,8,2,1,2,2,6,3,4];
-// a.    Create a function to sort and arrange these elements of the array in ascending order.
+
+
+var someNumbers = [3, 4, 8, 2, 1, 2, 2, 6, 3, 4];
+
+function sortAscending(arr) {
+    return arr.slice().sort(function(a, b) {
+        return a - b;
+    });
+}
+
+var sortedArray = sortAscending(someNumbers);
+console.log(sortedArray);
+
 // b.    Modify the first array to make sure that it will also display the last 3 numbers and the first 3 numbers in front of the sorted array
 // c.    From the same sorted array, also display the first 3 numbers.
 // 17.    Create a function that determines the age classification of people:
